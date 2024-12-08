@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table_Gemerator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <h1> Tabel Generator</h1>
+    <div class="maincontainer">
+        <label for="Writetable" class="table">
+            Number Of  Table:
+            <input class="table" type="number" id="writetable">
+        </label>
+        <br>
+        <label for="tableNumber" class="table">
+            Number Of  Count:
+            <input class="table" type="number" id="counttable">
+        </label>
+        <br>
+        <button onclick="generateTable()" class="table">Generate</button>
+        <br>
+        <table id="Writetable" class="table">
+            <!-- <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>1</td>
+                <td>=</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>2</td>
+                <td>=</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>3</td>
+                <td>=</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>4</td>
+                <td>=</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>5</td>
+                <td>=</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>6</td>
+                <td>=</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>7</td>
+                <td>=</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>8</td>
+                <td>=</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>x</td>
+                <td>9</td>
+                <td>=</td>
+                <td>27</td>
+            </tr>
+    
+     -->
+    
+        </table>
+    </div>
+        <br>
+        
+    
+        <script>
+    
+    function generateTable(){
+        let getNumber = Number (document.getElementById("writetable").value);
+        let countNumber = Number (document.getElementById("counttable").value);
+        let mathTable = "";
+        for(let i = 1; i <= countNumber; i++){ 
+            mathTable += `<tr><td>${getNumber}</td><td>x</td><td>${i}</td><td>=</td><td>${getNumber * i}</td></tr>`;
+        }
+        document.getElementById("Writetable").innerHTML = mathTable;
+    };
+    
+        </script>
+    
+    
+</body>
+</html>
